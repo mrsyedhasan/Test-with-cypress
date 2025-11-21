@@ -1,0 +1,23 @@
+{
+  "name": "cypress-test-project",
+  "version": "1.0.0",
+  "description": "Cypress test project for practicing web testing",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "test": "cypress run"
+  },
+  "keywords": [
+    "cypress",
+    "testing",
+    "e2e"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.6.0",
+    "dotenv": "^16.3.1"
+  }
+}
+

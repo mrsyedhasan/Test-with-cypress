@@ -1,0 +1,37 @@
+{
+  "users": {
+    "invalid": {
+      "username": "invalid_user",
+      "password": "invalid_password"
+    },
+    "valid": {
+      "username": "${CYPRESS_USERNAME}",
+      "password": "${CYPRESS_PASSWORD}"
+    }
+  },
+  "contactForm": {
+    "valid": {
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "john.doe@example.com",
+      "message": "This is a test message"
+    },
+    "minimal": {
+      "firstName": "Jane",
+      "lastName": "Smith",
+      "email": "jane.smith@example.com",
+      "message": "Test"
+    },
+    "longMessage": {
+      "firstName": "Bob",
+      "lastName": "Johnson",
+      "email": "bob.johnson@example.com",
+      "message": "This is a very long test message that contains multiple sentences and paragraphs to test how the form handles longer text inputs."
+    }
+  },
+  "errorMessages": {
+    "invalidLogin": "Your username is invalid!",
+    "emptyFields": "Please fill in all required fields"
+  }
+}
+
