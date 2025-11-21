@@ -89,8 +89,7 @@ class LoginPage extends BasePage {
    * @param {string} message - Expected error message
    */
   verifyErrorMessage(message) {
-    this.flashMessage.should('be.visible')
-    this.flashMessage.should('contain', message)
+    this.flashMessage.should('be.visible').and('contain', message)
     return this
   }
 

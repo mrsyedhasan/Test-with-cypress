@@ -2,6 +2,13 @@ import LoginPage from '../pages/LoginPage'
 
 describe('Login Page Tests', () => {
   const loginPage = new LoginPage()
+  let testData
+
+  before(() => {
+    cy.fixture('testData').then((data) => {
+      testData = data
+    })
+  })
 
   beforeEach(() => {
     loginPage.visit()
@@ -12,13 +19,11 @@ describe('Login Page Tests', () => {
   })
 
   it('should show error message for invalid credentials', () => {
-    cy.fixture('testData').then((data) => {
-      loginPage
-        .enterUsername(data.users.invalid.username)
-        .enterPassword(data.users.invalid.password)
-        .clickLogin()
-        .verifyErrorMessage(data.errorMessages.invalidLogin)
-    })
+    loginPage
+      .enterUsername(testData.users.invalid.username)
+      .enterPassword(testData.users.invalid.password)
+      .clickLogin()
+      .verifyErrorMessage(testData.errorMessages.invalidLogin)
   })
 
   it('should login successfully with valid credentials', () => {

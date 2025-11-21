@@ -4,15 +4,6 @@
  */
 class BasePage {
   /**
-   * Wait for page to load
-   * Override this in child classes for specific page load conditions
-   */
-  waitForPageLoad() {
-    // Default implementation - can be overridden
-    return this
-  }
-
-  /**
    * Get current URL
    */
   getCurrentUrl() {
